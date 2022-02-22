@@ -1,7 +1,7 @@
 import json
 
 
-WORDS_FILE = "words.txt"
+WORDS_FILE = "data/words.txt"
 
 class Node:
     def __init__(self, word, results):
@@ -125,7 +125,7 @@ def main():
     
     dt = generate_tree(words, candidates)
     dt_json = json.dumps(dt.to_json())
-    with open("dtree.json", "w") as f:
+    with open("data/tree.json", "w") as f:
         f.write(dt_json) 
 
 if __name__ == "__main__":

@@ -14,7 +14,7 @@ type Wordle struct {
 }
 
 func NewWordle() *Wordle {
-	wordsFile := "words.txt"
+	wordsFile := "data/words.txt"
 
 	rawBytes, err := ioutil.ReadFile(wordsFile)
 	if err != nil {
@@ -80,7 +80,7 @@ type Node struct {
 }
 
 func Solve(wordle *Wordle) {
-	file, _ := ioutil.ReadFile("dtree.json")
+	file, _ := ioutil.ReadFile("data/tree.json")
 
 	var root Node
 	err := json.Unmarshal([]byte(file), &root)
